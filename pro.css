@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    font-family: "Oswald", serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* لمنع التمرير */
+}
+
+/* تنسيق الفيديو الخلفي */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* لجعل الفيديو يغطي الشاشة بالكامل */
+    z-index: -1; /* للتأكد أن الفيديو يكون في الخلفية */
+}
+
+/* تنسيق الهيدر والقائمة */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+li a {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* تنسيق النصوص والمعلومات */
+.info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+}
+
+.info h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* تنسيق الزر */
+.info button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info button:hover {
+    background-color: #cc0000;
+}
+
+/* تنسيق العنصر container */
+.container {
+    width: 90%;
+    height: 640px;
+    background: rgba(255, 255, 255, 0);
+    margin-top: 20px;
+    z-index: 1;
+}
+
+root {
+    --navy: #1a237e;
+    --light-red: #ffcdd2;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 15px;
+    --spacing: 2rem;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--navy);
+    line-height: 1.6;
+    direction: rtl;
+}
+
+/* Layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing);
+}
+
+/* Profile Card */
+.profile {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: var(--spacing);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: var(--spacing);
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--navy);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: var(--navy);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: var(--text-light);
+}
+
+/* Sections */
+.section {
+    background-color: var(--light-red);
+    border-radius: calc(var(--border-radius) - 5px);
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.section h2 {
+    color: var(--navy);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Skills */
+.skills-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.skill-item {
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: calc(var(--border-radius) - 7px);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-2px);
+}
